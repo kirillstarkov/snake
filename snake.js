@@ -249,13 +249,13 @@ class Snake extends Grid {
     }
 
     #_noWallMode(obj) {
-        if (obj.cell <= 0){
+        if (obj.cell < 0){
             obj.cell = 12;
-        } else if (obj.cell >= 12) {
+        } else if (obj.cell > 12) {
             obj.cell = 0;
-        } else if (obj.row <= 0) {
+        } else if (obj.row < 0) {
             obj.row = 12;
-        } else if (obj.row >= 12) {
+        } else if (obj.row > 12) {
             obj.row = 0;
         }
         return obj;
